@@ -39,7 +39,8 @@ if uploaded_file is not None:
     
     st.write("Classifying...")
     
-    image_resized = image.resize((128, 128))
+    # Updated to (64, 64) to match training IMG_SIZE
+    image_resized = image.resize((64, 64))
     img_array = np.array(image_resized) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
     
